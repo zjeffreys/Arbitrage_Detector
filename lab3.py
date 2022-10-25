@@ -1,3 +1,4 @@
+from base64 import decode
 import socket
 import sys
 import fxp_bytes
@@ -22,8 +23,8 @@ class Lab3(object):
             while True:
                 s.sendto(fxp_bytes_subscriber.serialize_address(myAddr), REQUEST_ADDRESS)
                 data, addr = s.recvfrom(4096)
-                decoded = fxp_bytes_subscriber.de_marshal_message(data)
-            # print(data)
+                fxp_bytes_subscriber.de_marshal_message(data)
+            # print(decoded)
             # continue from here 
     
 

@@ -35,7 +35,6 @@ def serialize_address(address):
 Receives the byte steam and converts it to a message
 """
 def de_marshal_message(datagram):
-
     # Datetime
     t  = array('Q', datagram[0:8])
     t.byteswap()
