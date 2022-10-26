@@ -2,8 +2,6 @@
 This module contains marshaling functions for subscriber
 """
 from calendar import day_abbr
-from encodings import utf_8
-import ipaddress
 from array import array
 from datetime import datetime, timedelta
 
@@ -61,11 +59,3 @@ def de_marshal_message(datagram):
         quotes.append(quote)
 
     return quotes
-
-   
-
-   
-
-   
-   
-    

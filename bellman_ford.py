@@ -1,7 +1,5 @@
-from contextlib import nullcontext
 from datetime import timedelta
 from datetime import datetime
-import sys
 import math
 
 MAX_STEPS = 1000 
@@ -129,23 +127,3 @@ class Graph:
                     return prev, (currency_A, currency_B)
                     
         return prev, None
-    
-
-
-# if __name__ == '__main__':
-#     if len(sys.argv) != 1:
-#         # print("Usage: python lab3.py GCDHOST GCDPORT")
-#         print("Usage: python3 lab3.py")
-#         exit(1)
-
-
-#     g = Graph()
-#     g.addEdge('USD', "GBP", 0.7989773090444231)
-#     g.addEdge('GBP', "CAD", 0.8322701347524601)
-#     g.addEdge('CAD', "AUD", 3.3290805390098406)
-#     g.addEdge('AUD', "USD", 0.75035)
-#     print(g.BellmanFord('USD'))
-    # g.printGraph()
-    
-
-

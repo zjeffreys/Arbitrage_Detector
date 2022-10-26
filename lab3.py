@@ -20,7 +20,7 @@ ONE_HUNDRED_USD = 100
 
 
 class Lab3(object):
-    def __init__(self, publisher=REQUEST_ADDRESS):
+    def __init__(self, publisher):
         """
         Constructs a new Lab3 prgram
 
@@ -94,11 +94,14 @@ class Lab3(object):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 1:
-        # print("Usage: python lab3.py GCDHOST GCDPORT")
-        print("Usage: python3 lab3.py")
+    if len(sys.argv) != 3:
+        print("Usage: python lab3.py SUBSCRIBER_HOST SUBSCRIBER_PORT")
         exit(1)
-    lab3 = Lab3()
+    
+    host = sys.argv[1]
+    port = sys.argv[2]
+    subscriber_addr = (host, int(port))
+    lab3 = Lab3(subscriber_addr)
     
     
 
